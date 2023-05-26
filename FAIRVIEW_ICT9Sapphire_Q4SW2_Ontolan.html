@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TIME CONVERTER</title>
+    <style>
+        body {
+            background-image: url("ict.jpg");
+            background-repeat: no-repeat;
+            background-size: 1565px 620px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #74588a;
+            opacity: 0.9;
+            border: ridge;
+            color: #c7a7c2;
+            width: 90%;
+            height: 90%;
+        }
+
+        .container h5 {
+            text-align: center;
+            color: white;
+            font-size: 25px;
+        }
+
+        .container input[type="number"] {
+            width: 50%;
+            height: 20px;
+            font-size: 16px;
+            padding: 5px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+
+        .container input[type="button"] {
+            justify-content: center;
+            align-items: right;
+            text-align: center;
+            width: 70%;
+            height: 50%;
+            padding: 5px;
+            font-size: 16px;
+            margin-bottom: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #cec1d4;
+            color: #4A2020;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table align="center">
+             <h1 style="text-align: center; color: #c7a7c2; font-size: 20px;">Time Values Converter</h1>
+            <tr>
+                <td>
+                    <h5 style="text-align: left; font-size: 15px;">𝚂𝚎𝚌𝚘𝚗𝚍𝚜</h5>
+                    <input type="number" id="operandOne">
+                    <input type="button" onclick="S2M()" value="To Minutes">
+                    <input type="button" onclick="S2H()" value="To Hours">
+                    <input type="button" onclick="S2D()" value="To Days">
+                </td>
+                <td>
+                    <h5 style="text-align: left; font-size: 15px;">𝙼𝚒𝚗𝚞𝚝𝚎𝚜</h5>
+                    <input type="number" id="operandTwo">
+                    <input type="button" onclick="M2S()" value="To Seconds">
+                    <input type="button" onclick="M2H()" value="To Hours">
+                    <input type="button" onclick="M2D()" value="To Days">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h5 style="text-align: left; font-size: 15px;">𝙷𝚘𝚞𝚛𝚜</h5>
+                    <input type="number" id="operandThree">
+                    <input type="button" onclick="H2S()" value="To Seconds">
+                    <input type="button" onclick="H2M()" value="To Minutes">
+                    <input type="button" onclick="H2D()" value="To Days">
+                </td>
+                <td>
+                    <h5 style="text-align: left; font-size: 15px;">𝙳𝚊𝚢𝚜</h5>
+                    <input type="number" id="operandFour">
+                    <input type="button" onclick="D2S()" value="To Seconds">
+                    <input type="button" onclick="D2M()" value="To Minutes">
+                    <input type="button" onclick="D2H()" value="To Hours">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function S2M() {
+            var x = document.getElementById('operandOne').value;
+            var result = x / 60;
+            alert(result);
+        }
+
+        function S2H() {
+            var x = document.getElementById('operandOne').value;
+            var result = x / 3600;
+            alert(result);
+        }
+
+        function S2D() {
+            var x = document.getElementById('operandOne').value;
+            var result = x / 86400;
+            alert(result);
+        }
+
+        function M2S() {
+            var x = document.getElementById('operandTwo').value;
+            var result = x * 60;
+            alert(result);
+        }
+
+        function M2H() {
+            var x = document.getElementById('operandTwo').value;
+            var result = x / 60;
+            alert(result);
+        }
+
+        function M2D() {
+            var x = document.getElementById('operandTwo').value;
+            var result = x / 1440;
+            alert(result);
+        }
+
+        function H2S() {
+            var x = document.getElementById('operandThree').value;
+            var result = x * 3600;
+            alert(result);
+        }
+
+        function H2M() {
+            var x = document.getElementById('operandThree').value;
+            var result = x * 60;
+            alert(result);
+        }
+
+        function H2D() {
+            var x = document.getElementById('operandThree').value;
+            var result = x / 24;
+            alert(result);
+        }
+
+        function D2S() {
+            var x = document.getElementById('operandFour').value;
+            var result = x * 86400;
+            alert(result);
+        }
+
+        function D2M() {
+            var x = document.getElementById('operandFour').value;
+            var result = x * 1440;
+            alert(result);
+        }
+
+        function D2H() {
+            var x = document.getElementById('operandFour').value;
+            var result = x * 24;
+            alert(result);
+        }
+    </script>
+</body>
+</html>
